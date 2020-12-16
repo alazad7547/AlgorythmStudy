@@ -25,7 +25,7 @@ public class Solution {
 
     //String solution(String s)
     public String solution() {
-        String answer = "";
+        String answer = " ";
         int flag = 0;
         String[] strArr = s.split(" ");
         for(String str : strArr){
