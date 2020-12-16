@@ -19,7 +19,7 @@ public class Solution {
     //private String s = "try hello world";
 
     //결과 "HeLlO EvErYoNe";
-    private String s = "Hello   eVeryone";
+    private String s = "Hello  eVeryone";
 
 
 
