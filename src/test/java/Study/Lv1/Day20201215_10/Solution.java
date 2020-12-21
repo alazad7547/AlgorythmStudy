@@ -25,24 +25,27 @@ public class Solution {
 
     //String solution(String s)
     public String solution() {
-        String answer = " ";
-        int flag = 0;
-        String[] strArr = s.split(" ");
-        for(String str : strArr){
-            if(!str.equals(" ")){
-                for(int idx = 0; idx < str.length() ; idx++){
-                    if(idx % 2 == 0){
-                        answer += String.valueOf(str.charAt(idx)).toUpperCase();
-                    }
-                    else{
-                        answer += String.valueOf(str.charAt(idx)).toLowerCase();
-                    }
+        String answer = "";
+
+        String str[] = s.split("");
+        String space = " ";
+        int cnt = 0;
+
+        for(int i = 0; i < str.length; i++){
+            if(str[i].equals(space)){
+                cnt = 0;
+            }else{
+                if(cnt % 2 == 0){
+                    cnt++;
+                    str[i] = str[i].toUpperCase();
+                }else{
+                    cnt++;
+                    str[i] = str[i].toLowerCase();
                 }
             }
-            answer += " ";
+            answer += str[i];
         }
-
-        return answer.substring(0,answer.length()-1);
+        return answer;
     }
 
     public void GetSolution() {
